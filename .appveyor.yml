@@ -62,7 +62,7 @@ build: off
 
 install:
 
-  - ps: If(($env:PYTHON).Contains("pypy3")) { (New-Object Net.WebClient).DownloadFile('http://buildbot.pypy.org/nightly/py3.5/pypy-c-jit-latest-win32.zip', "$env:appveyor_build_folder\pypy3.zip"); 7z x pypy3.zip -r -opypy3-win32/ | Out-Null; move pypy3-win32 C:\pypy3; }
+  - ps: If(($env:PYTHON).Contains("pypy3")) { (New-Object Net.WebClient).DownloadFile('http://buildbot.pypy.org/nightly/py3.5/pypy-c-jit-latest-win32.zip', "$env:appveyor_build_folder\pypy3.zip"); 7z x pypy3.zip  | Out-Null; move pypy-c-jit-94309-4db4624409b4-win32 C:\pypy3; }
   - "DIR c:\\"
   - "DIR c:\\pypy3"
 
